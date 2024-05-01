@@ -30,6 +30,14 @@ Gain of the Transfer Function:
 
 $$|H(\omega)| = \frac{{G_0} {k_0}}{(1 + {\epsilon}^2 {T_N}^2(\frac{\omega}{\omega_c}))^{\frac{1}{2}}}$$
 
+Chebyshev Polynomial:
+
+$$T_N (\frac{\omega}{\omega_c}) = 
+\begin{cases} 
+cos(N \times arccos(\frac{\omega}{\omega_c})); & |\frac{\omega}{\omega_c}| \leqslant 1 \\
+cosh(N \times arccosh(\frac{\omega}{\omega_c})); & |\frac{\omega}{\omega_c}| > 1
+\end{cases}$$
+
 Order of Chebyshev Calculation:
 
 $$N = \frac{1}{cosh^{-1}(\omega_{s}/\omega_{p})}cosh^{-1}\left[\frac{10^{-\hat{G_{s}}/10}-1}{10^{-\hat{r}/10}-1}\right]^{1/2}$$
