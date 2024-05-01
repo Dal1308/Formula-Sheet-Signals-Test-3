@@ -29,8 +29,6 @@ Low Pass to Band Pass Filter:
 
 $$s \rightarrow \omega_c \times \frac{s^2 + \omega_H \omega_L}{s\times (\omega_H - \omega_L)}$$
 
-If you swap the numerator and denominator, you get a band stop filter
-
 \section{Chebyshev Formulae}
 
 Gain of the Transfer Function:
@@ -43,6 +41,12 @@ $$n = \frac{1}{cosh^{-1}(\omega_{s}/\omega_{p})}cosh^{-1}\left[\frac{10^{-\hat{G
 
 $$\epsilon_{dB} = r = \sqrt{1 + \epsilon^{2}}$$
 
-$$\epsilon = G_{ou dB}$$
+Gain Correction Factor:
+
+$$k_N = \begin{cases} 
+    a_0 & N odd\\ 
+    \frac{a_0}{\sqrt{1+ \epsilon^2}} = \frac{a_0}{10^{\frac{\hat{r}}{20}}} & N even
+\end{cases}
+$$
 
 \end{document}
